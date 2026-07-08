@@ -2,6 +2,15 @@
   <img src="src/assets/rate-limiting-service-banner.svg" alt="Rate Limiter Banner" width="100%">
 </p>
 
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#docker-setup">Docker</a> •
+  <a href="#api-endpoints">API</a> •
+  <a href="#benchmark">Benchmark</a>
+</p>
+
 <h1 align="center"> Rate Limiter Service</h1>
 
 <p align="center">
