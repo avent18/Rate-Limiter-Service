@@ -84,7 +84,7 @@ Rate Limiter Service is a production-ready backend application that implements t
 ## 🏗️ Architecture
 
 <p align="center">
-  <img src="assets/architecture.png" alt="Rate Limiter Service Architecture" width="90%">
+  <img src="src/assets/rate_limiter_architecture.png" alt="Rate Limiter Service Architecture" width="90%">
 </p>
 
 The application follows a **distributed architecture** to provide high performance, scalability, and consistency.
