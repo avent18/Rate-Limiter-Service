@@ -130,4 +130,81 @@ The application follows a **distributed architecture** to provide high performan
   <b>Autocannon</b>
 </p>
 
+## 📁 Project Structure
+
+```text
+Rate-Limiter-Service
+│
+├── 📂 assets          # README images
+├── 📂 nginx           # Nginx Load Balancer configuration
+├── 📂 prisma          # Prisma schema & migrations
+├── 📂 src
+│   ├── config         # Database, Redis & Logger configuration
+│   ├── controllers    # Request handlers
+│   ├── middlewares    # Validation & logging middlewares
+│   ├── repositories   # Database access layer
+│   ├── routes         # API routes
+│   ├── services       # Business logic
+│   ├── utils          # Utility functions
+│   ├── validations    # Zod validation schemas
+│   ├── app.js
+│   └── server.js
+│
+├── .dockerignore
+├── .env.example
+├── .gitignore
+├── Dockerfile
+├── docker-compose.yml
+├── package.json
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+* Node.js (v22 or later)
+* PostgreSQL
+* Redis
+* Docker & Docker Compose (optional, recommended)
+
+---
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/Rate-Limiter-Service.git
+cd Rate-Limiter-Service
+```
+
+---
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+### Environment Variables
+
+Create a `.env` file in the project root using `.env.example`.
+
+
+### Run the Application
+
+Development
+
+```bash
+npm run dev / nodemon
+```
+
+Production
+
+```bash
+npm start
+```
 
