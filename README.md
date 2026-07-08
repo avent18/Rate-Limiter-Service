@@ -300,7 +300,7 @@ http://localhost:3000/rate-limiter/check
 ### Benchmark Result
 
 <p align="center">
-  <img src="src\assets\autocannon.png" alt="Autocannon Benchmark" width="100%">
+  <img src="src\assets\autocannon_result.png" alt="Autocannon Benchmark" width="100%">
 </p>
 
 The benchmark demonstrates the application's ability to handle concurrent requests while maintaining low response latency through Redis caching and horizontal scaling with Nginx.
