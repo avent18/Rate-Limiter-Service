@@ -106,19 +106,28 @@ The application follows a **distributed architecture** to provide high performan
 * 🗄️ **Reliable** – PostgreSQL acts as the persistent source of truth for client configurations.
 * 🐳 **Portable** – Docker Compose enables the complete stack to run consistently across development and deployment environments.
 
-  ## 🛠 Tech Stack
+## 🛠 Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,express,redis,postgres,docker,nginx" />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,postgres,redis,prisma,docker,nginx,git,github,postman,vscode" />
 </p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=git,github,postman,vscode" />
+  <b>Node.js</b> •
+  <b>Express.js</b> •
+  <b>PostgreSQL</b> •
+  <b>Redis</b> •
+  <b>Prisma ORM</b> •
+  <b>Docker</b> •
+  <b>Nginx</b> •
+  <b>Git</b> •
+  <b>GitHub</b> •
+  <b>Postman</b> •
+  <b>VS Code</b> •
+  <b>Swagger UI</b> •
+  <b>Zod</b> •
+  <b>Pino</b> •
+  <b>Autocannon</b>
 </p>
 
-<p align="center">
-  <b>Node.js</b> • <b>Express.js</b> • <b>Redis</b> • <b>PostgreSQL</b> •
-  <b>Prisma ORM</b> • <b>Docker</b> • <b>Docker Compose</b> •
-  <b>Nginx</b> • <b>Swagger</b> • <b>Zod</b> • <b>Pino</b> • <b>Autocannon</b>
-</p>
 
