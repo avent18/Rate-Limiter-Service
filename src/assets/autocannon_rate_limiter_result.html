@@ -1,0 +1,29 @@
+<div style="background: #0d1117; border-radius: 12px; padding: 1.25rem 1.5rem; font-family: var(--font-mono); font-size: 12.5px; color: #c9d1d9; overflow-x: auto; line-height: 1.5;">
+<div style="color:#8b949e; margin-bottom:10px;">Running 10s test @ http://localhost:3000/rate-limiter/check<br/>50 connections</div>
+
+<pre style="margin:0 0 10px; white-space:pre;">┌─────────┬───────┬───────┬────────┬────────┬──────────┬──────────┬────────┐
+│ Stat    │  2.5% │   50% │  97.5% │    99% │      Avg │    Stdev │    Max │
+├─────────┼───────┼───────┼────────┼────────┼──────────┼──────────┼────────┤
+│ Latency │ 14 ms │ 45 ms │ 158 ms │ 218 ms │ 53.01 ms │ 38.59 ms │ 501 ms │
+└─────────┴───────┴───────┴────────┴────────┴──────────┴──────────┴────────┘</pre>
+
+<pre style="margin:0 0 10px; white-space:pre;">┌───────────┬────────┬────────┬────────┬────────┬────────┬─────────┬────────┐
+│ Stat      │     1% │   2.5% │    50% │  97.5% │    Avg │   Stdev │    Min │
+├───────────┼────────┼────────┼────────┼────────┼────────┼─────────┼────────┤
+│ Req/Sec   │    422 │    422 │  1,010 │  1,248 │  931.9 │  266.23 │    422 │
+├───────────┼────────┼────────┼────────┼────────┼────────┼─────────┼────────┤
+│ Bytes/Sec │ 165 kB │ 165 kB │ 381 kB │ 470 kB │ 360 kB │ 91.9 kB │ 165 kB │
+└───────────┴────────┴────────┴────────┴────────┴────────┴─────────┴────────┘</pre>
+
+<pre style="margin:0 0 10px; white-space:pre;">┌──────┬───────┐
+│ Code │ Count │
+├──────┼───────┤
+│ 200  │ 2303  │
+├──────┼───────┤
+│ 429  │ 7016  │
+└──────┴───────┘</pre>
+
+<div style="color:#8b949e;">Req/Bytes counts sampled once per second.<br/># of samples: 10</div>
+<div style="margin-top:6px;"><span style="color:#3fb950;">2303 2xx responses</span>, <span style="color:#f85149;">7016 non 2xx responses</span></div>
+<div style="color:#c9d1d9;">9k requests in 10.07s, 3.6 MB read</div>
+</div>

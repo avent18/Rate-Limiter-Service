@@ -1,0 +1,112 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15171F"/>
+      <stop offset="100%" stop-color="#1D2029"/>
+    </linearGradient>
+    <radialGradient id="gateGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8A33D" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#E8A33D" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#FFFFFF" fill-opacity="0.035"/>
+    </pattern>
+    <marker id="arrowCoral" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#E1595A"/>
+    </marker>
+  </defs>
+
+  <!-- frame -->
+  <rect x="0" y="0" width="1200" height="300" rx="20" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="300" rx="20" fill="url(#grid)"/>
+  <rect x="1" y="1" width="1198" height="298" rx="19" fill="none" stroke="#2A2E3A" stroke-width="1.5"/>
+
+  <!-- gate glow -->
+  <circle cx="920" cy="150" r="150" fill="url(#gateGlow)"/>
+
+  <!-- ===== LEFT: identity ===== -->
+  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
+    <!-- eyebrow pill -->
+    <rect x="64" y="52" width="196" height="27" rx="13.5" fill="none" stroke="#E8A33D" stroke-width="1"/>
+    <text x="86" y="70" font-size="11" letter-spacing="2" fill="#E8A33D">RATE&#8226;LIMITING API</text>
+
+    <!-- title -->
+    <text x="63" y="150" font-size="45" font-weight="700">
+      <tspan fill="#EDEEF3">rate-limiting</tspan><tspan fill="#8B8FA3">-service</tspan>
+    </text>
+  </g>
+
+  <text x="64" y="196" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8B8FA3">
+    Precise, distributed request throttling for high-throughput APIs
+  </text>
+
+  <!-- algorithm badges -->
+  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" letter-spacing="1">
+    <rect x="64" y="216" width="112" height="26" rx="13" fill="none" stroke="#3A3F4E" stroke-width="1"/>
+    <text x="80" y="233" fill="#C7CAD6">TOKEN BUCKET</text>
+
+    <rect x="188" y="216" width="128" height="26" rx="13" fill="none" stroke="#3A3F4E" stroke-width="1"/>
+    <text x="204" y="233" fill="#C7CAD6">SLIDING WINDOW</text>
+
+    <rect x="328" y="216" width="106" height="26" rx="13" fill="none" stroke="#3A3F4E" stroke-width="1"/>
+    <text x="344" y="233" fill="#C7CAD6">DISTRIBUTED</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="600" y1="48" x2="600" y2="252" stroke="#2A2E3A" stroke-width="1"/>
+
+  <!-- ===== RIGHT: the gate scene ===== -->
+
+  <!-- incoming request queue (drifts toward the gate, loops) -->
+  <g fill="#8B8FA3" fill-opacity="0.55">
+    <circle cx="650" cy="150" r="7">
+      <animate attributeName="cx" values="650;850;650" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.55;0.15;0.55" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="690" cy="150" r="7">
+      <animate attributeName="cx" values="690;890;690" dur="4.5s" begin="-1.1s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.55;0.15;0.55" dur="4.5s" begin="-1.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="730" cy="150" r="7">
+      <animate attributeName="cx" values="730;930;730" dur="4.5s" begin="-2.2s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.55;0.15;0.55" dur="4.5s" begin="-2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="770" cy="150" r="7">
+      <animate attributeName="cx" values="770;970;770" dur="4.5s" begin="-3.3s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.55;0.15;0.55" dur="4.5s" begin="-3.3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- capacity meter (the bucket) -->
+  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
+    <rect x="890" y="55" width="14" height="46" rx="3" fill="none" stroke="#3A3F4E" stroke-width="1.5"/>
+    <rect x="891.5" y="72" width="11" height="27" rx="2" fill="#E8A33D" fill-opacity="0.85">
+      <animate attributeName="height" values="27;10;27" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="72;89;72" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="897" y="116" font-size="9" letter-spacing="1" fill="#6B7080" text-anchor="middle">TOKENS</text>
+  </g>
+
+  <!-- gate -->
+  <rect x="895" y="100" width="6" height="100" rx="3" fill="#4A5062"/>
+  <rect x="909" y="100" width="6" height="100" rx="3" fill="#4A5062"/>
+  <text x="907" y="86" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#8B8FA3" text-anchor="middle">LIMIT&#160;&#8226;&#160;100/s</text>
+
+  <!-- rejected request -->
+  <circle cx="862" cy="150" r="7" fill="#E1595A"/>
+  <path d="M868,156 Q885,190 900,214" fill="none" stroke="#E1595A" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrowCoral)"/>
+  <text x="905" y="228" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" fill="#E1595A">429</text>
+
+  <!-- accepted requests, continuing on -->
+  <g fill="#E8A33D">
+    <circle cx="960" cy="150" r="7"/>
+    <circle cx="1000" cy="150" r="7"/>
+    <circle cx="1040" cy="150" r="7"/>
+  </g>
+  <line x1="925" y1="150" x2="948" y2="150" stroke="#E8A33D" stroke-width="1.5" stroke-dasharray="2 4" stroke-opacity="0.6"/>
+  <line x1="970" y1="150" x2="988" y2="150" stroke="#E8A33D" stroke-width="1.5" stroke-dasharray="2 4" stroke-opacity="0.6"/>
+  <line x1="1010" y1="150" x2="1028" y2="150" stroke="#E8A33D" stroke-width="1.5" stroke-dasharray="2 4" stroke-opacity="0.6"/>
+
+  <path d="M1063,150 l9,9 l16,-19" fill="none" stroke="#E8A33D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1100" y="155" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="14" font-weight="700" fill="#E8A33D">200</text>
+</svg>
