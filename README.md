@@ -79,3 +79,29 @@ Rate Limiter Service is a production-ready backend application that implements t
 * Environment-based configuration using **.env**.
 * Clean layered architecture (Controllers → Services → Repositories).
 * Performance tested using **Autocannon**.
+
+
+## 🏗️ Architecture
+
+<p align="center">
+  <img src="assets/architecture.png" alt="Rate Limiter Service Architecture" width="90%">
+</p>
+
+The application follows a **distributed architecture** to provide high performance, scalability, and consistency.
+
+### Request Flow
+
+1. A client sends a request to the **Nginx Load Balancer**.
+2. Nginx distributes incoming traffic across multiple **Node.js application instances** using the **Round Robin** strategy.
+3. Each application instance retrieves the client configuration from **Redis Cache**. If the configuration is unavailable, it is fetched from **PostgreSQL** and cached for future requests.
+4. The current bucket state is stored and updated in **Redis**, enabling all application instances to share the same rate-limiting state.
+5. The **Token Bucket Algorithm** determines whether the request should be allowed or rejected based on the available tokens.
+6. The updated bucket state is written back to Redis, and the API responds with the remaining token count.
+
+### Why This Architecture?
+
+* ⚡ **Fast** – Redis provides low-latency access for bucket state and cached client configurations.
+* 📈 **Scalable** – Multiple application instances can be added behind Nginx without changing the application logic.
+* 🔄 **Consistent** – Shared Redis ensures all instances enforce the same rate limits.
+* 🗄️ **Reliable** – PostgreSQL acts as the persistent source of truth for client configurations.
+* 🐳 **Portable** – Docker Compose enables the complete stack to run consistently across development and deployment environments.
