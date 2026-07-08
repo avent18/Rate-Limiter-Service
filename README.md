@@ -105,3 +105,20 @@ The application follows a **distributed architecture** to provide high performan
 * 🔄 **Consistent** – Shared Redis ensures all instances enforce the same rate limits.
 * 🗄️ **Reliable** – PostgreSQL acts as the persistent source of truth for client configurations.
 * 🐳 **Portable** – Docker Compose enables the complete stack to run consistently across development and deployment environments.
+
+  ## 🛠 Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nodejs,express,redis,postgres,docker,nginx" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=git,github,postman,vscode" />
+</p>
+
+<p align="center">
+  <b>Node.js</b> • <b>Express.js</b> • <b>Redis</b> • <b>PostgreSQL</b> •
+  <b>Prisma ORM</b> • <b>Docker</b> • <b>Docker Compose</b> •
+  <b>Nginx</b> • <b>Swagger</b> • <b>Zod</b> • <b>Pino</b> • <b>Autocannon</b>
+</p>
+
