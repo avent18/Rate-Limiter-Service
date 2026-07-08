@@ -19,3 +19,10 @@ A production-ready distributed <b>Rate Limiter Service</b> built using <b>Node.j
 ![Nginx](https://img.shields.io/badge/Nginx-LoadBalancer-009639?logo=nginx)
 
 </p>
+
+
+---
+
+## 📖 Overview
+
+Rate Limiter Service is a production-ready backend application that implements the **Token Bucket Algorithm** to efficiently control API traffic. The project is horizontally scalable using multiple Node.js instances behind an Nginx Load Balancer while maintaining a shared bucket state through Redis and persistent configuration in PostgreSQL.
