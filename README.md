@@ -199,7 +199,7 @@ Create a `.env` file in the project root using `.env.example`.
 Development
 
 ```bash
-npm run dev / nodemon
+"npm run dev" or "nodemon"
 ```
 
 Production
@@ -208,3 +208,30 @@ Production
 npm start
 ```
 
+## 🐳 Docker Setup
+
+Build and start all services
+
+```bash
+docker compose up --build
+```
+
+Run in detached mode
+
+```bash
+docker compose up -d
+```
+
+Stop all containers
+
+```bash
+docker compose down
+```
+
+The Docker Compose setup includes:
+
+* **Nginx** – Load Balancer
+* **Node.js App 1**
+* **Node.js App 2**
+* **Redis**
+* **PostgreSQL**
