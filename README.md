@@ -279,3 +279,23 @@ http://localhost:3000/api-docs
   <img src="src/assets/swagger.png" alt="Swagger UI" width="100%">
 </p>
 
+## 📊 Performance Benchmark
+
+The service was benchmarked using **Autocannon** to evaluate throughput and latency under concurrent load.
+
+### Benchmark Command
+
+```bash
+npx autocannon -c 200 -d 20 -m POST \
+-H "Content-Type: application/json" \
+-b '{"clientId":"docker-test"}' \
+http://localhost:3000/rate-limiter/check
+```
+
+### Benchmark Result
+
+<p align="center">
+  <img src="src\assets\autocannon_rate_limiter_result.html" alt="Autocannon Benchmark" width="100%">
+</p>
+
+The benchmark demonstrates the application's ability to handle concurrent requests while maintaining low response latency through Redis caching and horizontal scaling with Nginx.
