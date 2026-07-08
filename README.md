@@ -12,6 +12,11 @@
 </p>
 
 <h1 align="center"> Rate Limiter Service</h1>
+<p align="center">
+  <img src="https://img.shields.io/github/license/avent18/Rate-Limiter-Service?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/stars/avent18/Rate-Limiter-Service?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/last-commit/avent18/Rate-Limiter-Service?style=for-the-badge"/>
+</p>
 
 <p align="center">
 A production-ready distributed <b>Rate Limiter Service</b> built using <b>Node.js</b>, <b>Express.js</b>, <b>Redis</b>, <b>PostgreSQL</b>, <b>Prisma ORM</b>, <b>Docker</b>, and <b>Nginx</b>.
@@ -295,7 +300,7 @@ http://localhost:3000/rate-limiter/check
 ### Benchmark Result
 
 <p align="center">
-  <img src="src\assets\autocannon_rate_limiter_result.html" alt="Autocannon Benchmark" width="100%">
+  <img src="src\assets\autocannon.png" alt="Autocannon Benchmark" width="100%">
 </p>
 
 The benchmark demonstrates the application's ability to handle concurrent requests while maintaining low response latency through Redis caching and horizontal scaling with Nginx.
