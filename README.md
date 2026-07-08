@@ -244,3 +244,38 @@ The Docker Compose setup includes:
 * **Node.js App 2**
 * **Redis**
 * **PostgreSQL**
+
+## 📡 API Endpoints
+
+### Admin APIs
+
+|  Method  | Endpoint                  | Description                              |
+| :------: | :------------------------ | :--------------------------------------- |
+|  `POST`  | `/admin/client`           | Create a new client configuration        |
+|   `GET`  | `/admin/client`           | Retrieve all client configurations       |
+|   `GET`  | `/admin/client/:clientId` | Retrieve a specific client configuration |
+|   `PUT`  | `/admin/client/:clientId` | Update an existing client configuration  |
+| `DELETE` | `/admin/client/:clientId` | Delete a client configuration            |
+
+---
+
+### Rate Limiter API
+
+| Method | Endpoint              | Description                                                           |
+| :----: | :-------------------- | :-------------------------------------------------------------------- |
+| `POST` | `/rate-limiter/check` | Validate request and consume a token using the Token Bucket Algorithm |
+
+## 📖 API Documentation
+
+Interactive API documentation is available through **Swagger UI**, allowing you to explore and test all endpoints directly from the browser.
+
+**Default URL**
+
+```text
+http://localhost:3000/api-docs
+```
+
+<p align="center">
+  <img src="src/assets/swagger.png" alt="Swagger UI" width="100%">
+</p>
+
